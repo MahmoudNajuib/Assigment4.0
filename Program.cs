@@ -23,97 +23,102 @@ namespace Assigment04
 
             #region 14- Write a program to allow the user to enter int and print the REVERSED of it.
 
-            //Console.Write("Enter an Integer: ");
+            //    Console.Write("Enter an Integer: ");
 
             //Start:
-            //string Input = Console.ReadLine();
+            //    string Input = Console.ReadLine();
 
-            //if (int.TryParse(Input, out int Number))
-            //{
-            //    char[] CharArray = Input.ToCharArray();             // Reversing The Number.
-            //    Array.Reverse(CharArray);
-
-            //    string ReversedString = new string(CharArray);      // Handling Negative Numbers To Be Reversed Correctly (The Negative Sign Shouldn't Be Reversed).
-            //    if (Number < 0)
+            //    if (int.TryParse(Input, out int Number))
             //    {
-            //        ReversedString = "-" + ReversedString.TrimEnd('-');
-            //    }
+            //        char[] CharArray = Input.ToCharArray();             // Reversing The Number.
+            //        Array.Reverse(CharArray);
 
-            //    Console.WriteLine($"\nReversed: {ReversedString}");
-            //}
-            //else
-            //{
-            //    Console.Write("\nInvalid Input. Please Enter a Valid Integer: ");
-            //    goto Start;
-            //}
+            //        string ReversedString = new string(CharArray);      // Handling Negative Numbers To Be Reversed Correctly (The Negative Sign Shouldn't Be Reversed).
+            //        if (Number < 0)
+            //        {
+            //            ReversedString = "-" + ReversedString.TrimEnd('-');
+            //        }
+
+            //        Console.WriteLine($"\nReversed: {ReversedString}");
+            //    }
+            //    else
+            //    {
+            //        Console.Write("\nInvalid Input. Please Enter a Valid Integer: ");
+            //        goto Start;
+            //    }
 
             #endregion
 
             #region 15- Write a program in C# Sharp to find prime numbers within a range of numbers.
 
-            //    Console.Write("Enter Starting Number: ");
+            Console.Write("Enter Starting Number: ");
 
-            //Start:
-            //    if (int.TryParse(Console.ReadLine(), out int Start))
-            //    {
-            //        Console.Write("Enter Ending Number: ");
-            //    End:
-            //        if (int.TryParse(Console.ReadLine(), out int End))
-            //        {
-            //            if (Start <= End)
-            //            {
-            //                //bool InPrime = false;
+        Start:
+            if (int.TryParse(Console.ReadLine(), out int Start))
+            {
+                Console.Write("Enter Ending Number: ");
+            End:
+                if (int.TryParse(Console.ReadLine(), out int End))
+                {
+                    if (Start <= End)
+                    {
+                        /*bool InPrime = false;*/
 
-            //                Console.WriteLine($"\nThe Prime Numbers Between {Start} and {End} are :");
-            //                for (int i = Start; i <= End; i++)
-            //                {
-            //                    bool IsNumPrime = true;
-            //                    for (int j = 2; j < i; j++)
-            //                    {
-            //                        if (i % j == 0)
-            //                        {
-            //                            IsNumPrime = false;
-            //                            break;
-            //                        }
-            //                        ////else if (i % 2 != 0 && )
-            //                        ////{
-            //                        ////    IsNumPrime = true;
-            //                        ////    Console.WriteLine("\nNo Prime Numbers Found in The Given Range.");
-            //                        ////}
-            //                    }
-            //                    if (IsNumPrime)
-            //                    {
-            //                        Console.Write(i + " ");
-            //                    }
-            //                }
-            //                Console.WriteLine("\n");
+                        Console.WriteLine($"\nThe Prime Numbers Between {Start} and {End} are :");
+                        for (int i = Start; i <= End; i++)
+                        {
+                            bool IsNumPrime = true;
+                            for (int j = 2; j < i; j++)
+                            {
+                                if (i % j == 0)
+                                {
+                                    IsNumPrime = false;
+                                    break;
+                                }
 
-            //            }
-            //            else
-            //            {
-            //                Console.Write("\nInvalid Input. Please Enter an Ending Integer that is Greater than the Starting Integer: ");
-            //                goto End;
-            //            }
-            //        }
+                                /*
+                                else if (i % 2 != 0 && )
+                                {
+                                    IsNumPrime = true;
+                                    Console.WriteLine("\nNo Prime Numbers Found in The Given Range.");
+                                }
+                                */
 
-            //        else
-            //        {
-            //            Console.Write("\nInvalid Input. Please Enter a Valid Ending Integer: ");
-            //            goto End;
-            //        }
+                            }
+                            if (IsNumPrime)
+                            {
+                                Console.Write(i + " ");
+                            }
+                        }
+                        Console.WriteLine("\n");
 
-            //    }
-            //    else
-            //    {
-            //        Console.Write("\nInvalid Input. Please Enter a Valid Starting Integer: ");
-            //        goto Start;
-            //    }
+                    }
+                    else
+                    {
+                        Console.Write("\nInvalid Input. Please Enter an Ending Integer that is Greater than the Starting Integer: ");
+                        goto End;
+                    }
+                }
 
-            //    ////if (IsPrime == false)
-            //    ////{
-            //    ////    Console.WriteLine("\nNo Prime Numbers Found in The Given Range.");
-            //    ////}
-            //    ////int End = int.Parse(Console.ReadLine());
+                else
+                {
+                    Console.Write("\nInvalid Input. Please Enter a Valid Ending Integer: ");
+                    goto End;
+                }
+
+            }
+            else
+            {
+                Console.Write("\nInvalid Input. Please Enter a Valid Starting Integer: ");
+                goto Start;
+            }
+            /*
+                if (IsPrime == false)
+                {
+                    Console.WriteLine("\nNo Prime Numbers Found in The Given Range.");
+                }
+                int End = int.Parse(Console.ReadLine());
+            */
 
             #endregion
 
@@ -137,98 +142,101 @@ namespace Assigment04
 
             #region 17- Create a program that asks the user to input three points (x1, y1), (x2, y2) and(x3, y3), and determines whether these points lie on a single straight line:
 
-            Console.WriteLine("Check If The Three Points Are on the Same Line or Not.   (Hint: Split Between X and Y with a Comma ',')\n\n");
+            //    Console.WriteLine("Check If The Three Points Are on the Same Line or Not.   (Hint: Split Between X and Y with a Comma ',')\n\n");
 
-            Console.Write("Enter the First Point X1, Y1:    ");
-        First:
-            try
-            {
-                string[] point1 = Console.ReadLine().Split(',');        // To Split the Input String To Get the X and Y Co-ordinates.
-                if (double.TryParse(point1[0], out double X1) && double.TryParse(point1[1], out double Y1) && point1.Length == 2) // To Check If the Input is Valid & To Get the X and Y Co-ordinates & To Check If the Input is 2 Co-ordinates.
-                {
-                    X1 = double.Parse(point1[0]);                    // To Get the X Co-ordinates.
-                    Y1 = double.Parse(point1[1]);                    // To Get the Y Co-ordinates.
+            //    Console.Write("Enter the First Point X1, Y1:    ");
+            //First:
+            //    try
+            //    {
+            //        string[] point1 = Console.ReadLine().Split(',');        // To Split the Input String To Get the X and Y Co-ordinates.
+            //        if (double.TryParse(point1[0], out double X1) && double.TryParse(point1[1], out double Y1) && point1.Length == 2) // To Check If the Input is Valid & To Get the X and Y Co-ordinates & To Check If the Input is 2 Co-ordinates.
+            //        {
+            //            X1 = double.Parse(point1[0]);                    // To Get the X Co-ordinates.
+            //            Y1 = double.Parse(point1[1]);                    // To Get the Y Co-ordinates.
 
-                    Console.Write("Enter the Second Point X2, Y2:   ");
-                Second:
-                    try
-                    {
-                        string[] point2 = Console.ReadLine().Split(',');
-                        if (double.TryParse(point2[0], out double X2) && double.TryParse(point2[1], out double Y2) || point2.Length > 3)
-                        {
-                            X2 = double.Parse(point2[0]);
-                            Y2 = double.Parse(point2[1]);
+            //            Console.Write("Enter the Second Point X2, Y2:   ");
+            //        Second:
+            //            try
+            //            {
+            //                string[] point2 = Console.ReadLine().Split(',');
+            //                if (double.TryParse(point2[0], out double X2) && double.TryParse(point2[1], out double Y2) || point2.Length > 3)
+            //                {
+            //                    X2 = double.Parse(point2[0]);
+            //                    Y2 = double.Parse(point2[1]);
 
-                            Console.Write("Enter the Third Point X3, Y3:    ");
-                        Third:
-                            try
-                            {
-                                string[] point3 = Console.ReadLine().Split(',');
-                                if (double.TryParse(point3[0], out double X3) && double.TryParse(point3[1], out double Y3) || point3.Length > 3)
-                                {
-                                    X3 = double.Parse(point3[0]);
-                                    Y3 = double.Parse(point3[1]);
+            //                    Console.Write("Enter the Third Point X3, Y3:    ");
+            //                Third:
+            //                    try
+            //                    {
+            //                        string[] point3 = Console.ReadLine().Split(',');
+            //                        if (double.TryParse(point3[0], out double X3) && double.TryParse(point3[1], out double Y3) || point3.Length > 3)
+            //                        {
+            //                            X3 = double.Parse(point3[0]);
+            //                            Y3 = double.Parse(point3[1]);
 
-                                    /* The Conditions:
-                                     Slope between A and B = Slope between B and C
+            //                            /* The Conditions:
+            //                             Slope between A and B = Slope between B and C
 
-                                     Slope AB = (Y2 - Y1) / (X2 - X1)
-                                     Slope BC = (Y3 - Y2) / (X3 - X2)
+            //                             Slope AB = (Y2 - Y1) / (X2 - X1)
+            //                             Slope BC = (Y3 - Y2) / (X3 - X2)
 
-                                     If Slope AB = Slope BC, then the three points are on the same line.
-                                     If Slope AB != Slope BC, then the three points are not on the same line.
-                                    */
+            //                             If Slope AB = Slope BC, then the three points are on the same line.
+            //                             If Slope AB != Slope BC, then the three points are not on the same line.
+            //                            */
 
-                                    if ((Y2 - Y1) / (X2 - X1) == (Y3 - Y2) / (X3 - X2))
-                                    {
-                                        Console.WriteLine("\nAll Three Points Are on the Same Line.");
-                                    }
-                                    else
-                                    {
-                                        Console.WriteLine("\nAll Three Points Are Not on the Same Line.");
-                                    }
-                                }
-                                else
-                                {
-                                    Console.Write("\nInvalid Input. Please Enter a Valid Point: ");
-                                    goto Third;
-                                }
-                            }
-                            catch
-                            {
-                                Console.Write("\nInvalid Input. Please Enter a Valid Point: ");
-                                goto Third;
-                            }
-                        }
-                        else
-                        {
-                            Console.Write("\nInvalid Input. Please Enter a Valid Point: ");
-                            goto Second;
-                        }
-                    }
-                    catch
-                    {
-                        Console.Write("\nInvalid Input. Please Enter a Valid Point: ");
-                        goto Second;
-                    }
-                }
-                else
-                {
-                    Console.Write("\nInvalid Input. Please Enter a Valid Point: ");
-                    goto First;
-                }
-            }
-            catch
-            {
-                Console.Write("\nInvalid Input. Please Enter a Valid Point: ");
-                goto First;
-            }
+            //                            if ((Y2 - Y1) / (X2 - X1) == (Y3 - Y2) / (X3 - X2))
+            //                            {
+            //                                Console.WriteLine("\nAll Three Points Are on the Same Line.");
+            //                            }
+            //                            else
+            //                            {
+            //                                Console.WriteLine("\nAll Three Points Are Not on the Same Line.");
+            //                            }
+            //                        }
+            //                        else
+            //                        {
+            //                            Console.Write("\nInvalid Input. Please Enter a Valid Point: ");
+            //                            goto Third;
+            //                        }
+            //                    }
+            //                    catch
+            //                    {
+            //                        Console.Write("\nInvalid Input. Please Enter a Valid Point: ");
+            //                        goto Third;
+            //                    }
+            //                }
+            //                else
+            //                {
+            //                    Console.Write("\nInvalid Input. Please Enter a Valid Point: ");
+            //                    goto Second;
+            //                }
+            //            }
+            //            catch
+            //            {
+            //                Console.Write("\nInvalid Input. Please Enter a Valid Point: ");
+            //                goto Second;
+            //            }
+            //        }
+            //        else
+            //        {
+            //            Console.Write("\nInvalid Input. Please Enter a Valid Point: ");
+            //            goto First;
+            //        }
+            //    }
+            //    catch
+            //    {
+            //        Console.Write("\nInvalid Input. Please Enter a Valid Point: ");
+            //        goto First;
+            //    }
 
-            //Console.Write("Enter the Second Point (x2, y2): ");
-            //Console.Write("Enter the Third Point (x3, y3): ");
-            //Console.WriteLine("\nAll Three Points Are on the Same Line.");
-            //Console.WriteLine("\nAll Three Points Are Not on the Same Line.");
-            //Console.Write("\nInvalid Input. Please Enter a Valid Point: ");
+            /*
+            Console.Write("Enter the Second Point (x2, y2): ");
+            Console.Write("Enter the Third Point (x3, y3): ");
+            Console.WriteLine("\nAll Three Points Are on the Same Line.");
+            Console.WriteLine("\nAll Three Points Are Not on the Same Line.");
+            Console.Write("\nInvalid Input. Please Enter a Valid Point: ");
+            */
+
             #endregion
 
             Console.ReadKey();
