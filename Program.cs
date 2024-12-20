@@ -1,6 +1,8 @@
 ﻿//     Mahmoud Najuib AbdEltwab     -    C42-G02-C#04
 //
 
+using System.Threading.Tasks;
+
 namespace Assigment04
 {
     internal class Program
@@ -51,67 +53,68 @@ namespace Assigment04
 
             #region 15- Write a program in C# Sharp to find prime numbers within a range of numbers.
 
-            Console.Write("Enter Starting Number: ");
+            //    Console.Write("Enter Starting Number: ");
 
-        Start:
-            if (int.TryParse(Console.ReadLine(), out int Start))
-            {
-                Console.Write("Enter Ending Number: ");
-            End:
-                if (int.TryParse(Console.ReadLine(), out int End))
-                {
-                    if (Start <= End)
-                    {
-                        /*bool InPrime = false;*/
+            //Start:
+            //    if (int.TryParse(Console.ReadLine(), out int Start))
+            //    {
+            //        Console.Write("Enter Ending Number: ");
+            //    End:
+            //        if (int.TryParse(Console.ReadLine(), out int End))
+            //        {
+            //            if (Start <= End)
+            //            {
+            //                /*bool InPrime = false;*/
 
-                        Console.WriteLine($"\nThe Prime Numbers Between {Start} and {End} are :");
-                        for (int i = Start; i <= End; i++)
-                        {
-                            bool IsNumPrime = true;
-                            for (int j = 2; j < i; j++)
-                            {
-                                if (i % j == 0)
-                                {
-                                    IsNumPrime = false;
-                                    break;
-                                }
+            //                Console.WriteLine($"\nThe Prime Numbers Between {Start} and {End} are :");
+            //                for (int i = Start; i <= End; i++)
+            //                {
+            //                    bool IsNumPrime = true;
+            //                    for (int j = 2; j < i; j++)
+            //                    {
+            //                        if (i % j == 0)
+            //                        {
+            //                            IsNumPrime = false;
+            //                            break;
+            //                        }
 
-                                /*
-                                else if (i % 2 != 0 && )
-                                {
-                                    IsNumPrime = true;
-                                    Console.WriteLine("\nNo Prime Numbers Found in The Given Range.");
-                                }
-                                */
+            //                        /*
+            //                        else if (i % 2 != 0 && )
+            //                        {
+            //                            IsNumPrime = true;
+            //                            Console.WriteLine("\nNo Prime Numbers Found in The Given Range.");
+            //                        }
+            //                        */
 
-                            }
-                            if (IsNumPrime)
-                            {
-                                Console.Write(i + " ");
-                            }
-                        }
-                        Console.WriteLine("\n");
+            //                    }
+            //                    if (IsNumPrime)
+            //                    {
+            //                        Console.Write(i + " ");
+            //                    }
+            //                }
+            //                Console.WriteLine("\n");
 
-                    }
-                    else
-                    {
-                        Console.Write("\nInvalid Input. Please Enter an Ending Integer that is Greater than the Starting Integer: ");
-                        goto End;
-                    }
-                }
+            //            }
+            //            else
+            //            {
+            //                Console.Write("\nInvalid Input. Please Enter an Ending Integer that is Greater than the Starting Integer: ");
+            //                goto End;
+            //            }
+            //        }
 
-                else
-                {
-                    Console.Write("\nInvalid Input. Please Enter a Valid Ending Integer: ");
-                    goto End;
-                }
+            //        else
+            //        {
+            //            Console.Write("\nInvalid Input. Please Enter a Valid Ending Integer: ");
+            //            goto End;
+            //        }
 
-            }
-            else
-            {
-                Console.Write("\nInvalid Input. Please Enter a Valid Starting Integer: ");
-                goto Start;
-            }
+            //    }
+            //    else
+            //    {
+            //        Console.Write("\nInvalid Input. Please Enter a Valid Starting Integer: ");
+            //        goto Start;
+            //    }
+
             /*
                 if (IsPrime == false)
                 {
@@ -236,6 +239,57 @@ namespace Assigment04
             Console.WriteLine("\nAll Three Points Are Not on the Same Line.");
             Console.Write("\nInvalid Input. Please Enter a Valid Point: ");
             */
+
+            #endregion
+
+            #region 18- Within a company, the efficiency of workers is evaluated based on the duration required to complete a specific task.
+            /* A workers efficiency level is determined as follows:
+                    -If the worker completes the job within 2 to 3 hours, they are considered
+                    highly efficient.
+                    - If the worker takes 3 to 4 hours, they are instructed to increase their
+                    speed.
+                    - If the worker takes 4 to 5 hours, they are provided with training to
+                    enhance their speed.
+                    - If the worker takes more than 5 hours, they are required to leave the
+                    company.
+
+                To calculate the efficiency of a worker, the time taken for the task is
+                obtained via user input from the keyboard.
+            */
+
+            //    Console.Write("Enter the Time Taken to Complete the Task (in Hours): ");
+            //Start:
+            //    try
+            //    {
+            //        int Time = int.Parse(Console.ReadLine());
+            //        if (Time >= 2 && Time <= 3)
+            //        {
+            //            Console.WriteLine("\nHighly Efficient Worker.");
+            //        }
+            //        else if (Time >= 3 && Time <= 4)
+            //        {
+            //            Console.WriteLine("\nInstructed to Increase Their Speed.");
+            //        }
+            //        else if (Time >= 4 && Time <= 5)
+            //        {
+            //            Console.WriteLine("\nProvided with Training to Enhance Their Speed.");
+            //        }
+            //        else if (Time > 5)
+            //        {
+            //            Console.WriteLine("\nRequired to Leave the Company.");
+            //        }
+            //        else
+            //        {
+            //            Console.Write("\nInvalid Input. Please Enter a Valid Time: ");
+            //            goto Start;
+            //        }
+            //    }
+
+            //    catch
+            //    {
+            //        Console.Write("\nInvalid Input. Please Enter a Valid Time: ");
+            //        goto Start;
+            //    }
 
             #endregion
 
